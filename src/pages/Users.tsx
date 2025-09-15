@@ -1,13 +1,19 @@
-import React from 'react';
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle } from "@/components/ui/card"
+import { mockDados } from "../data/data.ts";
 
 function Users() {
   return(
-    <div>
-      <Card className='w-full max-w-sm'>
-        <CardTitle></CardTitle>
-      </Card>
-    </div>
+    <section className='py-20 px-20'>
+      <div className="flex gap-4 mx-auto max-w-6xl ">
+        {mockDados.map((mockDado, index) =>(
+          <Card key={index} className='w-full max-w-sm'>
+            <CardHeader>
+                <CardTitle className='text-lg'>{mockDado.nome}</CardTitle>
+            </CardHeader> 
+          </Card>
+        ))}
+      </div>
+    </section>
   )
 }
 

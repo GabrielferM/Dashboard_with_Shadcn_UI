@@ -1,8 +1,6 @@
-
-import { Table,TableBody,TableCaption,TableCell,TableHead,TableHeader,TableRow } from "@/components/ui/table";
+import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from "@/components/ui/table";
 // import { Bar, BarChart, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart.tsx";
 import { mockDados } from "../data/data.ts";
-
 export function Dashboard() {
   return ( 
     <div>
