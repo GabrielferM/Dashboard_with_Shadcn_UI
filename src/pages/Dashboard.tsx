@@ -1,5 +1,6 @@
 
 import { Table,TableBody,TableCaption,TableCell,TableHead,TableHeader,TableRow } from "@/components/ui/table";
+// import { Bar, BarChart, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart.tsx";
 import { mockDados } from "../data/data.ts";
 
 export function Dashboard() {
@@ -26,6 +27,14 @@ export function Dashboard() {
           ))}
         </TableBody>
       </Table>
+      {/* <div>
+        <ChartContainer>
+          <BarChart data={mockDados}>
+            <Bar dataKey="nome" />
+            <ChartTooltip content={<ChartTooltipContent/>} />
+          </BarChart>
+        </ChartContainer>
+      </div> */}
     </div>
   );
 }
