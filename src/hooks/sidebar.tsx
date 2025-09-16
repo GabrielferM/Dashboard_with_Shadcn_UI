@@ -1,8 +1,8 @@
 import { DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
 import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
-import { ChartColumnDecreasing, ChevronUp, Settings, User, User2 } from "lucide-react";
-import { Link, Route } from 'react-router-dom';
+import { ChartColumnDecreasing, ChevronUp, Settings, User } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const url = [
     { 
