@@ -9,8 +9,8 @@ export const App = () => {
       <div className="flex">
         <SidebarProvider>
           <AppSideBar />
-          <main>
-            <SidebarTrigger />
+          <SidebarTrigger/>
+          <main className="flex-1 flex flex-col justify-center items-center p-8"> 
             <AppRoutes />
           </main>
         </SidebarProvider>
