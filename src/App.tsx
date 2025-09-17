@@ -10,7 +10,7 @@ export const App = () => {
         <SidebarProvider>
           <AppSideBar />
           <SidebarTrigger/>
-          <main className="flex-1 flex flex-col justify-center items-center p-8"> 
+          <main className="flex-1">
             <AppRoutes />
           </main>
         </SidebarProvider>
