@@ -24,10 +24,10 @@ const url = [
 export function AppSideBar(){
     return(
         <Sidebar className="w-60">
-            <SidebarContent className="border-r border-black bg-gradient-to-t from-[#D10000] to-[#750000]  flex flex-col h-full">
+            <SidebarContent className="border-r border-black bg-gradient-to-t from-[#124E79] to-[#3D769E]  flex flex-col h-full">
                 <SidebarGroup>
                     <div className="flex items-center justify-between h-20">
-                        <span className="text-[16px] font-mono  text-white ">User agilizer</span>
+                        <span className="text-[16px] font-normal  text-white ">User agilizer</span>
                         <img src="/chart-pie.svg" alt="Logo" className=" w-16 h-16  object-contain m-1 mt-1"></img>
                     </div>
                     <hr></hr>
@@ -37,7 +37,7 @@ export function AppSideBar(){
                         <SidebarMenu className="space-y-4">
                         {url.map((item) => (
                             <SidebarMenuItem key={item.urls}>
-                            <SidebarMenuButton asChild className="text-2xl font-mono  text-white">
+                            <SidebarMenuButton asChild className="text-2xl font-normal  text-white">
                                 <Link to={item.urls}>{<item.icon className="w-4 h-4 flex  text-white" />} {item.nome}</Link>
                             </SidebarMenuButton>
                             <hr></hr>
@@ -51,7 +51,7 @@ export function AppSideBar(){
                         <SidebarMenuItem>
                             <DropdownMenu>
                                 <DropdownMenuTrigger asChild>
-                                    <SidebarMenuButton className=" text-white font-mono ">
+                                    <SidebarMenuButton className=" text-white font-normal">
                                         Username
                                         <ChevronUp className="ml-auto"/>
                                     </SidebarMenuButton>

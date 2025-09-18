@@ -125,3 +125,11 @@
     @apply w-100 border border-black bg-white;
   }
 }
+
+@font-face {
+  font-family: 'Lora';
+  src: url('./public/Font/Lora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* variável */
+  font-style: normal;
+  font-display: swap;
+}
