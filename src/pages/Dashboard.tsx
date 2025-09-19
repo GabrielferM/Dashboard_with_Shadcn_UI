@@ -3,7 +3,6 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Label } from "@/components/ui/label";
 import {
   chartConfigEscolariedade,
-  chartConfigEstados,
   chartDataEscolariedade,
   chartDataEstados,
   chatConfigGenero,
