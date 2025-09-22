@@ -59,16 +59,21 @@ export const generoFeminino = usuariosMock.filter(
   (user) => user.genero === "Feminino"
 ).length;
 
-export const chatConfigGenero = {
-  valor:{
-    label:"masculino",
-    color:"#3D769E"
-  },
-}
+
 export const chatDataGenero = [
- {genero:"masculino", valor:generoMasculino},
- {genero:"feminino", valor:generoFeminino},
+  { genero: "feminino", visitors: generoFeminino, fill: "#e0218a" },
+  { genero: "maculino", visitors: generoMasculino, fill: "#3D769E" },
 ]
+export const chatConfigGenero = {
+  chrome: {
+    label: "feminino",
+    color: "var(--chart-1)",
+  },
+  safari: {
+    label: "masculino",
+    color: "var(--chart-2)",
+  },
+} 
 
 const quantidadePorEstado: Record<string,number> = {};
 
@@ -84,13 +89,65 @@ usuariosMock.forEach((user) =>{
 export const chartDataEstados = Object.entries(quantidadePorEstado).map(
   ([estado, quantidade]) => ({
     name: estado,
-    valor: quantidade
+    valor: quantidade,
+    fill: "#3D769E"
   })
 );
 
+
+
+
 export const chartConfigEstados = {
-  valor:{
-    label:"estado",
-    color:"#3D769E"
+  SP: {
+    label: "SP",
+    color: "var(--chart-1)",
   },
-}
+  DF: {
+    label: "DF",
+    color: "var(--chart-1)",
+  },
+  BA: {
+    label: "BA",
+    color: "var(--chart-1)",
+  },
+  CE: {
+    label: "CE",
+    color: "var(--chart-1)",
+  },
+  RS: {
+    label: "RS",
+    color: "var(--chart-1)",
+  },
+  GO: {
+    label: "GO",
+    color: "var(--chart-1)",
+  },
+  PR: {
+    label: "PR",
+    color: "var(--chart-1)",
+  },
+  ES: {
+    label: "ES",
+    color: "var(--chart-1)",
+  },
+  MG: {
+    label: "MG",
+    color: "var(--chart-1)",
+  },
+  RJ: {
+    label: "RJ",
+    color: "var(--chart-1)",
+  },
+  PE: {
+    label: "PE",
+    color: "var(--chart-1)",
+  },
+  SC: {
+    label: "SC",
+    color: "var(--chart-1)",
+  },
+  RR: {
+    label: "RR",
+    color: "var(--chart-1)",
+  },
+};

@@ -9,7 +9,7 @@ export const usuariosMock = [
     telefone: "(11) 98888-7777",
     funcao: "Analista de Sistemas",
     salarioBruto: 5500,
-    genero: "Masculino",
+    genero: "Feminino",
     escolaridade: "Ensino Superior Completo",
     dataNascimento: "1988-03-12",
     situacao: "Ativo",
@@ -21,47 +21,6 @@ export const usuariosMock = [
       numero: "100"
     }
   },
-  {
-    icon: User,
-    nome: "Maria Oliveira",
-    email: "maria.oliveira@hotmail.com",
-    cpf: "321.654.987-11",
-    telefone: "(21) 97777-5555",
-    funcao: "Assistente Administrativa",
-    salarioBruto: 3000,
-    genero: "Feminino",
-    escolaridade: "Ensino Médio Completo",
-    dataNascimento: "1992-07-25",
-    situacao: "Ativo",
-    endereco: {
-      estado: "RJ",
-      cidade: "Rio de Janeiro",
-      bairro: "Copacabana",
-      rua: "Av. Atlântica",
-      numero: "2500"
-    }
-  },
-  {
-    icon: User,
-    nome: "Carlos Pereira",
-    email: "carlos.pereira@yahoo.com",
-    cpf: "789.456.123-55",
-    telefone: "(31) 96666-4444",
-    funcao: "Desenvolvedor Frontend",
-    salarioBruto: 6800,
-    genero: "Masculino",
-    escolaridade: "Ensino Superior Completo",
-    dataNascimento: "1995-05-10",
-    situacao: "Ativo",
-    endereco: {
-      estado: "MG",
-      cidade: "Belo Horizonte",
-      bairro: "Savassi",
-      rua: "Rua Pernambuco",
-      numero: "350"
-    }
-  },
-  // + 10 novos
   {
     icon: User,
     nome: "Fernanda Lima",

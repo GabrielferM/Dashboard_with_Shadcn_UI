@@ -24,8 +24,10 @@ import React from "react";
 import { ptBR } from "date-fns/locale";
 
 function Settings() {
+
   const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState<Date | undefined>(undefined);
+
   return (
     <div className="flex items-center justify-center min-h-screen p-4">
       <Card className="w-[800px] text-[#063B60]">
@@ -42,6 +44,7 @@ function Settings() {
                   </Label>
                   <Input
                     id="nome"
+                    name="nome"
                     type="text"
                     placeholder="Digite o seu nome..."
                   />
@@ -52,8 +55,10 @@ function Settings() {
                   </Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="usuario@gmail.com"
+                    autoComplete="email"
                   />
                 </div>
               </div>
@@ -64,6 +69,7 @@ function Settings() {
                   </Label>
                   <Input
                     id="cpf"
+                    name="cpf"
                     type="text"
                     placeholder="___.___.___-__"
                     required
@@ -75,6 +81,7 @@ function Settings() {
                   </Label>
                   <Input
                     id="telefone"
+                    name="telefone"
                     type="string"
                     placeholder="(xx) xxxx-xxxx"
                     required
@@ -88,6 +95,7 @@ function Settings() {
                   </Label>
                   <Input
                     id="funcao"
+                    name="funcao"
                     type="string"
                     placeholder="Digite a função"
                     required
@@ -99,6 +107,7 @@ function Settings() {
                   </Label>
                   <Input
                     id="salarioBruto"
+                    name="salarioBruto"
                     type="number"
                     placeholder="Digite o salário bruto"
                     required
@@ -110,11 +119,10 @@ function Settings() {
                   <Label htmlFor="genero" className="text-xl">
                     Gênero
                   </Label>
-                  <Select>
-                    <SelectTrigger className="w-[300px]">
+                  <Select name="genero">
+                    <SelectTrigger id="genero" className="w-[300px]">
                       <SelectValue
                         placeholder="Selecione um gênero"
-                        id="genero"
                       />
                     </SelectTrigger>
                     <SelectContent>
@@ -133,11 +141,10 @@ function Settings() {
                   <Label htmlFor="escolariedade" className="text-xl">
                     Escolaridade
                   </Label>
-                  <Select>
-                    <SelectTrigger className="w-[300px]">
+                  <Select name="escolariedade">
+                    <SelectTrigger id="escolariedade" className="w-[300px]">
                       <SelectValue
                         placeholder="Selecione a sua escolariedade"
-                        id="Escolariedade"
                       />
                     </SelectTrigger>
                     <SelectContent>
@@ -176,11 +183,11 @@ function Settings() {
                   <Label htmlFor="data" className="text-xl">
                     Data de nascimento
                   </Label>
-                  <Popover open={open} onOpenChange={setOpen}>
-                    <PopoverTrigger asChild>
+                  <Popover open={open} onOpenChange={setOpen} >
+                    <PopoverTrigger asChild name="data">
                       <Button
                         variant="outline"
-                        id="date"
+                        id="data"
                         className="w-[300px] justify-between"
                       >
                         {date ? date.toLocaleDateString() : "Selecione data"}
@@ -205,11 +212,11 @@ function Settings() {
                   </Popover>
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="situação" className="text-xl">
+                  <Label htmlFor="situacao" className="text-xl">
                     Situação
                   </Label>
-                  <Select>
-                    <SelectTrigger className="w-[300px]">
+                  <Select name="situacao">
+                    <SelectTrigger id="situacao" className="w-[300px]">
                       <SelectValue placeholder="Selecione a situação" />
                     </SelectTrigger>
                     <SelectContent>
@@ -225,25 +232,30 @@ function Settings() {
                 <div className="flex gap-3 flex-wrap">
                   <div className="grid gap-2">
                     <Label htmlFor="cep">CEP</Label>
-                    <Input id="CEP" type="string" placeholder="xxxxxx-xx"  className="w-[120px]" required />
+                    <Input
+                      id="cep"
+                      name="cep"
+                      type="string"
+                      placeholder="xxxxxx-xx"
+                      className="w-[120px]"
+                      required
+                    />
                   </div>
                   <div className="flex-1 grid gap-2">
-                    <Label htmlFor="endereço">
-                      Endereço
-                    </Label>
+                    <Label htmlFor="endereco">Endereço</Label>
                     <Input
-                      id="endereço"
+                      id="endereco"
+                      name="endereco"
                       type="string"
                       placeholder="Rua, Av, Lagrouro.."
                       required
                     />
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="numero">
-                      Numero
-                    </Label>
+                    <Label htmlFor="numero">Numero</Label>
                     <Input
-                      id="cidade"
+                      id="numero"
+                      name="numero"
                       type="string"
                       placeholder="N°"
                       className="w-[100px]"
@@ -253,33 +265,30 @@ function Settings() {
                 </div>
                 <div className="flex gap-3 flex-wrap">
                   <div className="flex flex-col flex-1 gap-2">
-                    <Label htmlFor="bairro">
-                      Bairro
-                    </Label>
+                    <Label htmlFor="bairro">Bairro</Label>
                     <Input
-                      id="rua"
+                      id="bairro"
+                      name="bairro"
                       type="string"
                       placeholder="Digite o nome do bairro"
                       required
                     />
                   </div>
                   <div className="flex flex-col flex-1 gap-2">
-                    <Label htmlFor="idade">
-                      Cidade
-                    </Label>
+                    <Label htmlFor="cidade">Cidade</Label>
                     <Input
-                      id="numero"
+                      id="cidade"
+                      name="cidade"
                       type="string"
                       placeholder="Cidade"
                       required
                     />
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="estado">
-                      Estado
-                    </Label>
+                    <Label htmlFor="uf">Estado</Label>
                     <Input
                       id="uf"
+                      name="uf"
                       type="string"
                       placeholder="UF"
                       className="w-[100px]"
@@ -291,17 +300,10 @@ function Settings() {
             </div>
           </CardContent>
           <CardFooter className="flex gap-2 justify-end mt-10">
-            <Button
-              type="reset"
-              variant="cancel"
-            >
+            <Button type="reset" variant="cancel">
               Cancelar
             </Button>
-            <Button
-              type="submit"
-              variant="salve"
-              
-            >
+            <Button type="submit" variant="salve">
               Salvar
             </Button>
           </CardFooter>

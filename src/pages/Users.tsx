@@ -46,7 +46,9 @@ export function User() {
             className="flex flex-col rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
             <CardHeader className="text-3xl flex flex-col items-center text-center text-[#124E79]">
-              {mockDado.icon && <mockDado.icon className="w-16 h-16 text-[#124E79]" />}
+              {mockDado.icon && (
+                <mockDado.icon className="w-16 h-16 text-[#124E79]" />
+              )}
               {mockDado.nome}
               <Label className="bg-[#124E79] border-[#124E79] border-6 rounded-2xl text-white mt-2 px-3 py-1 shadow-xs">
                 {mockDado.funcao}
@@ -56,41 +58,47 @@ export function User() {
             <hr />
 
             <CardContent className="space-y-4 p-5 text-gray-700 ">
-              
-                <div className="space-y-3">
-                  <h3 className="text-[#124E79] text-2xl font-semibold">Contado</h3>
-                  <p className="flex items-center gap-2 text-lg">
-                    <Mail className="w-4 h-4 text-[#124E79]" />
-                    {mockDado.email}
-                  </p>
-                  <p className="flex items-center gap-2 text-lg">
-                    <Phone className="w-4 h-4 text-[#124E79]" />
-                    {mockDado.telefone}
-                  </p>
-                  <p className="flex items-center gap-2 text-lg">
-                    <CreditCard className="w-4 h-4 text-[#124E79]" />
-                    {mockDado.cpf}
-                  </p>
-                </div>
-                <h3 className="text-[#124E79] text-2xl font-semibold">Informações</h3>
-                <div className="flex flex-wrap gap-10">
-                  <p className="flex items-center gap-2 text-lg">
-                    <Banknote className="text-[#124E79] w-4 h-4"/> {" "}
-                    {new Intl.NumberFormat("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                    }).format(mockDado.salarioBruto)}
-                  </p>
-                  <p className="flex items-center gap-2 text-lg">
-                    <VenusAndMars className="w-4 h-4 text-[#124E79]" /> {mockDado.genero}
-                  </p>
-                </div>
-                  <p className="flex items-center gap-2 text-lg">
-                    <Calendar className="w-4 h-4 text-[#124E79]" />
-                    {mockDado.dataNascimento}
-                  </p>
+              <div className="space-y-3">
+                <h3 className="text-[#124E79] text-2xl font-semibold">
+                  Contado
+                </h3>
+                <p className="flex items-center gap-2 text-lg">
+                  <Mail className="w-4 h-4 text-[#124E79]" />
+                  {mockDado.email}
+                </p>
+                <p className="flex items-center gap-2 text-lg">
+                  <Phone className="w-4 h-4 text-[#124E79]" />
+                  {mockDado.telefone}
+                </p>
+                <p className="flex items-center gap-2 text-lg">
+                  <CreditCard className="w-4 h-4 text-[#124E79]" />
+                  {mockDado.cpf}
+                </p>
+              </div>
+              <h3 className="text-[#124E79] text-2xl font-semibold">
+                Informações
+              </h3>
+              <div className="flex flex-wrap gap-10">
+                <p className="flex items-center gap-2 text-lg">
+                  <Banknote className="text-[#124E79] w-4 h-4" />{" "}
+                  {new Intl.NumberFormat("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  }).format(mockDado.salarioBruto)}
+                </p>
+                <p className="flex items-center gap-2 text-lg">
+                  <VenusAndMars className="w-4 h-4 text-[#124E79]" />{" "}
+                  {mockDado.genero}
+                </p>
+              </div>
+              <p className="flex items-center gap-2 text-lg">
+                <Calendar className="w-4 h-4 text-[#124E79]" />
+                {mockDado.dataNascimento}
+              </p>
               <div className="space-y-1">
-                <h3 className="text-[#124E79] text-2xl font-semibold">Endereço</h3>
+                <h3 className="text-[#124E79] text-2xl font-semibold">
+                  Endereço
+                </h3>
                 <p className="flex items-center gap-2 text-lg">
                   <MapPin className="w-4 h-4 text-[#124E79]" />
                   {mockDado.endereco.rua}, {mockDado.endereco.numero} -{" "}

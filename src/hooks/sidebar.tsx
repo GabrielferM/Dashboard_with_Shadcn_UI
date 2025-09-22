@@ -11,7 +11,7 @@ const url = [
         icon: ChartColumnDecreasing
     },
     {
-        nome: "Configurações",
+        nome: "Formulário",
         urls: "/settings",
         icon: Settings
     },
